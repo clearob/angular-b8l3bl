@@ -1,0 +1,16 @@
+<h1>Sales</h1>
+
+<div>
+  <table border="1">
+    <thead>
+      <tr>
+        <th *ngFor="let header of _object.keys(jsonData[0]); let i = index">{{header}}</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let row of jsonData; let i = index">
+        <th *ngFor="let objKey of _object.keys(row); let j = index">{{ row[objKey] }} </th>
+      </tr>
+    </tbody>
+  </table>
+</div>
